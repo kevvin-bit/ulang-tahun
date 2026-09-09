@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/style.css">
+<body>
+    <div id="hiddenMessage" class="hidden-message">
+            <div class="judul">
+                <h2>Surat Untukmu</h2>
+            </div>
+            <div class="line"></div>
+            <div class="pesan">
+                <p></p>
+            </div>
+            
+            <div class="line2"></div>
+            
+            <div class="tombol">
+                <a href="index.html">
+                    <button class="button"><b>Kembali</b></button>
+                </a>
+                <a href="index3.html">
+                    <button class="lanjut"><b>Next</b></button>
+                </a>
+            </div>
+            
+            
+        </div>
+
+        <script>
+            const teksPesan = "Kamu itu orang yang special banget bagi aku, aku sayang banget sama kamu, aku harap kamu terus sama aku dan ga pernah ninggalin aku sampe kapanpun😥😥, jangan pernah tinggalin aku  ya sayang, setiap badai emang rasanya kayak susah buat di lewati, tapi kita harus tetep bareng buat ngelewati badai itu dan menyelesaikan semua badai yang datang. Sesulit apapun kita  jangan sampe putus ya, selalu inget janji  kita ya, pokoknya kalo  kita udah sama sama sukses harus nikah ya, awas aja nikah sama orang lain heumm... maaf ya sayang kalo aku masih sering egois, dan selalu kalah sama egoku, maaf belum bisa jadi cowo yang baik, maaf juga belum bisa jadi cowo kayak yang kamu mau, aku selalu berharap sama kamu sampe selamanya, sekali lagi maaf ya sayang kalo aku belum bisa jadi kebanggaanmu, aku ga pernah nyesel ketemu kamu, malah aku sangat bersyukur ketemu sama kamu di hidup yang singkat ini, kalo aku ngelakuin kesalahan ingetin ya jangan di biarin atau di marahin, tegur aku baik baik ya, dan maaf juga kalo aku ga pernah dengerin kamu hihihi, jangan  pernah bosen ngingetin aku ya, maaf juga selama ini aku terlalu mengekang kamu, karena aku sayang sama kamu hihihi... I ALWAYS LOVE YOU SAYANGKUUU❤️❤️❤️❤️❤️ AKU PENGEN KITA ABADI SAMPE SELAMANYA..."
+            const elemenePesan = document.querySelector('.pesan')
+            let index2 = 0
+
+            function ketikPesan() {
+                if (index2 < teksPesan.length){
+                    elemenePesan.textContent += teksPesan.charAt(index2)
+                    index2++
+                    setTimeout(ketikPesan, 70)
+                }
+            }
+            window.onload = ketikPesan
+        </script>
+</body>
+</html>

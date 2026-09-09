@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun!</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1 class="title">Happy Birthday Sayang🎉</h1>
+        
+        <img src="../image/arumi.jpeg" alt="Foto Ulang Tahun" class="profile-img">
+
+        <h2 class="name">Zifani Cahaya Arumi</h2>
+
+        <p class="message">
+            
+        </p>
+
+        <a href="index2.html">
+            <button id="surpriseBtn" class="btn"><b>Klik ya sayang</b></button>    
+        </a>
+        
+
+        
+    </div>
+    <script>
+        const teksPsn = "Selamat ulang tahun sayang...................  ada yang nambah umur nih jadi 17 tahun, selamat ya sayang, aku harap setelah kamu baca surat ini kamu bakal seneng hehe, maaf aku cuma bisa buat yang sesederhana ini."
+        const elmnPsn = document.querySelector('.message')
+        let index = 0
+
+        function pesanKetik() {
+            if (index < teksPsn.length){
+                elmnPsn.textContent += teksPsn.charAt(index)
+                index++
+                setTimeout(pesanKetik, 80)
+            }
+        }
+        window.onload = pesanKetik
+    </script>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

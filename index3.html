@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/style.css">
+<body>
+    
+    <div class="hidden-message" id="flowers-container">
+        <div class="judul">
+            <h2>II LOVEE YOUU SOO MUCHH</h2>
+        </div>
+
+        <div class="line"></div>
+        <div class="foto">
+            <img src="../image/WhatsApp Image 2026-09-05 at 13.20.22.jpeg" alt="" class="foto1">
+            <img src="../image/WhatsApp Image 2026-09-05 at 13.20.25.jpeg" alt="" class="foto2">
+            <img src="../image/WhatsApp Image 2026-09-05 at 13.20.27.jpeg" alt="" class="foto3">
+            <img src="../image/WhatsApp Image 2026-09-05 at 13.20.29.jpeg" alt="" class="foto4">
+            <img src="../image/WhatsApp Image 2026-09-05 at 13.20.28.jpeg" alt="" class="foto5">
+        </div>
+    </div>
+
+    <script>
+        function createFlower() {
+            const container = document.getElementById('flowers-container')
+            const flower = document.createElement('div')
+
+            const flowers = ['💐', '🌸', '💮', '🪷', '✨', '🎈']
+            flower.innerText = flowers[Math.floor(Math.random() * flowers.length)]
+            flower.classList.add('flower')
+
+            flower.style.left = Math.random() * 100 + 'vw'
+
+            const duration = Math.random() * 3+3
+            flower.style.animationDuration = duration + 's'
+
+            flower.style.fontSize = Math.random() * 15 + 15 + 'px'
+
+            container.appendChild(flower)
+
+            setTimeout (() => {
+                flower.remove()
+            }, duration * 1000)
+        }
+
+        setInterval(createFlower, 300)
+    </script>
+</body>
+</html>
